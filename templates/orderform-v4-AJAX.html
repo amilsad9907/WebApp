@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+ <body>
+  <h2>Place your order</h2>
+  <form method="POST" name="orderInfoForm" id="orderInfoForm">
+   <table>
+     <tr> 
+       <td><label for="customerName">Name:</label></td>
+       <td><input type="text" id="customerName" name="customerName"></td>
+     </tr>
+     <tr> 
+       <td><label for="customerAddress">Address:</label></td>
+       <td><input type="text" id="customerAddress" name="customerAddress"></td>
+     </tr>
+     <tr> 
+       <td><label for="customerRegion">Region:</label></td>
+       <!--
+       <td><input type="text" id="customerRegion" name="customerRegion"></td>
+       -->
+       <td>
+         <select id="customerRegion" name="customerRegion">
+           <option value='Caribbean'>Caribbean including Guyana and Suriname</option>
+           <option value='NorthAmerica'>North America</option>
+           <option value='Europe'>Europe including UK/Ireland/Iceland</option>
+           <option value='Asia'>Asia</option> 
+           <option value='SouthAmerica'>South America</option>
+         </select>
+       </td>
+     </tr>
+     <tr> 
+       <td><label for="customerEmail">Email:</label></td>
+       <td><input type="text" id="customerEmail" name="customerEmail"></td>
+     </tr>
+     <tr> 
+       <td><label for="customerPhoneNo">Phone Number:</label></td>
+       <td><input type="text" id="customerPhoneNo" name="customerPhoneNo"></td>
+     </tr>
+     <tr>
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>
+     </tr>
+     <tr> 
+       <td><label for="packageNo">Package:</label></td>
+       <td>
+         <table> 
+           <tr>
+             <td>
+               <input type="radio" id="packageNo" name="packageNo" value="0">Anniversary Comic Book<br /> $400 GYD<br /><img src="../static/media/Chainsawman.jpg" /> </input>
+             </td>
+             <td>
+               <input type="radio" id="packageNo" name="packageNo" value="1">Comic Book Package<br /> $800 GYD<br /><img src="../static/media/Demon_Slayer.jpg" /> </input>
+             </td>
+             <td>
+               <input type="radio" id="packageNo" name="packageNo" value="2">Anniversary Anime Package<br /> $1500 GYD<br /><img src="../static/media/Fullmetal.jpg" />  </input>
+             </td>
+             <td>
+               <input type="radio" id="packageNo" name="packageNo" value="3">Deluxe Package<br /> $3000 GYD<br /><img src="../static/media/Jujutsu_kaisen.jpg" /> </input>
+             </td>
+             <td>
+               <input type="radio" id="packageNo" name="packageNo" value="4">Mystery Package<br /> $1000 GYD<br /><img src="../static/media/Hero_Academia.png" /></input>  
+             </td>
+           </tr>
+         </table>
+         
+       </td>
+     </tr>
+     
+     <tr>
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>
+     </tr>
+     
+     <tr>
+       <td> </td>
+       <td> <input type="submit" value="Submit" name="btnSubmit" id="btnSubmit"> </td>
+     </tr>
+   </table>
+  </form>
+  
+  <div name="orderInfoResponse" id="orderInfoResponse">
+    Order Info Response will be updated once submit button is clicked.
+  </div>
+  
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  
+  <script>
+  
+  $( document ).ready(function() {
+    console.log( "document loaded" );
+  
+    $('#btnSubmit').click(function(event) {
+      console.log( "submit button clicked" )
+      
+      // Do not submit for.  We will submit it manually or using code below.
+      event.preventDefault();
+      
+      // Get form
+      var form = $("#orderInfoForm")[0]
+          
+      // Create a FormData object
+      var data = new FormData(form);
+      
+      console.log( data );
+      
+      // Ajax call to /student/info route in middleware
+      $.ajax( { 
+            type: "POST",
+            enctype: 'multipart/form-data',
+            url: "http://localhost:5000/order/new",
+            data: data,
+            processData: false,
+            contentType: false,
+            cache: false,
+            timeout: 800000,
+            success: function (data) {
+              //$("#outputContent").text(data);
+              console.log( data )
+              $("#orderInfoResponse").text( data );
+            },
+            error: function (err) {
+              console.log( err )
+              console.log( "error encountered - check middleware is running" );
+            }
+            
+            });   
+      
+    });
+    
+  
+  });
+  
+  
+  
+  
+  </script>
+
+  
+ </body>
+</html>
+
+

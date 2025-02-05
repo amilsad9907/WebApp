@@ -1,0 +1,34 @@
+{
+  "pid":0,
+  "name": "Anniversary Comic Book",
+  "description": "A limited edition comic book",
+  "price": 400
+}
+
+{
+  "pid":1,
+  "name": "Comic Book Package",
+  "description": "Multiple comic books",
+  "price": 800
+}
+
+{
+  "pid":2,
+  "name": "Anniversary Anime Package",
+  "description": "Japanese comic books",
+  "price": 1500
+}
+
+{
+  "pid":3,
+  "name": "Deluxe Package",
+  "description": "A selection of limited print comic books",
+  "price": 3000
+}
+
+{
+  "pid":4,
+  "name": "Mystery Package",
+  "description": "A selection of comic books and a T-Shirt",
+  "price": 1000
+}

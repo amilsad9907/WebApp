@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>AnimeHubGY</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="./static/media/animehub2.png" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="./static/css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top">
+                    <img src="./static/media/animehub2.png" alt="AnimeHub Logo" style="width: 70px; height: auto; margin-right: 5px;">
+                    Anime Hub
+                </a>
+                <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span style="color: #003366;">Menu</span>
+                    <i class="fas fa-bars" style="color: #003366;"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#order">Order</a>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Masthead-->
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <img class="masthead-avatar mb-5" src="./static/media/animehub2.png" alt="..." />
+                <h1 class="masthead-heading text-normal mb-0">Anime Hub Guyana</h1>
+                <div class="divider-custom divider-dark">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-wand-sparkles"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <p class="masthead-subheading font-weight-light mb-0" style="color: #003366;">Your Anime Adventures Await - Shop Manga, Collectibles and Exclusive Souvenirs Here!</p>
+            </div>
+        </header>
+
+        <!-- Order Section-->
+        <section class="page-section order" id="order">
+            <div class="container">
+                <h1 class="page-section-heading text-center text-normal text-normal mb-0">Place Your Order</h1>
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-cart-shopping"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <div class="row justify-content-center">
+                    <form method="POST" name="orderInfoForm" id="orderInfoForm">
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="customerName" name="customerName" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                            <label for="name">Full Name</label>
+                            <div class="invalid-feedback" data-sb-feedback="customerName:required">Full name is required.</div>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="customerAddress" name="customerAddress" type="text" placeholder="Enter your address..." data-sb-validations="required" />
+                            <label for="name">Address</label>
+                            <div class="invalid-feedback" data-sb-feedback="customerAddress:required">An address is required.</div>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <label for="name">Region</label><br />&nbsp;<br />&nbsp;<br />
+                            <div class="invalid-feedback" data-sb-feedback="customerRegion:required">A region is required.</div>
+                            <select id="customerRegion" name="customerRegion">                    
+                                <option value="" disabled selected>Select your region</option>
+                                <option value='Caribbean'>Caribbean including Guyana and Suriname - $50 GYD Shipping Fee</option>
+                                <option value='NorthAmerica'>North America - $150 GYD Shipping Fee</option>
+                                <option value='Europe'>Europe including UK/Ireland/Iceland - $200 GYD Shipping Fee</option>
+                                <option value='Asia'>Asia - $100 GYD Shipping Fee</option> 
+                                <option value='SouthAmerica'>South America - $175 GYD Shipping Fee</option>
+                            </select>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="customerEmail" name="customerEmail" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                            <label for="email">Email Address</label>
+                            <div class="invalid-feedback" data-sb-feedback="customerEmail:required">An email is required.</div>
+                            <div class="invalid-feedback" data-sb-feedback="customerEmail:email">Email is not valid.</div>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="customerPhoneNo" name="customerPhoneNo" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                            <label for="phone">Phone Number</label>
+                            <div class="invalid-feedback" data-sb-feedback="customerPhoneNo:required">A phone number is required.</div>
+                        </div>
+
+                        <br />
+
+                        <table> 
+                            <tr>
+                                <td>
+                                    <input type="radio" id="packageNo" name="packageNo" value="0">&nbsp;Anniversary Comic Book<br /> $400 GYD<br /><img src="../static/media/Chainsawman.jpg" /> </input>
+                                </td>
+                                <td>
+                                    <input type="radio" id="packageNo" name="packageNo" value="1">&nbsp;Comic Book Package<br /> $800 GYD<br /><img src="../static/media/Demon_Slayer.jpg" /> </input>
+                                </td>
+                                <td>
+                                    <input type="radio" id="packageNo" name="packageNo" value="2">&nbsp;Anniversary Anime Package<br /> $1500 GYD<br /><img src="../static/media/Fullmetal.jpg" /> </input>
+                                </td>
+                                <td>
+                                    <input type="radio" id="packageNo" name="packageNo" value="3">&nbsp;Deluxe Package<br /> $3000 GYD<br /><img src="../static/media/Jujutsu_kaisen.jpg" /> </input>
+                                </td> 
+                                <td>
+                                    <input type="radio" id="packageNo" name="packageNo" value="4">&nbsp;Mystery Package<br /> $1000 GYD<br /><img src="../static/media/Hero_Academia.png" /></input>   
+                                </td>
+                            </tr>
+                        </table>   
+
+                        <br />
+                        
+                        <!-- Submit Button -->
+                        <input type="submit" value="Place Order" name="btnSubmit" id="btnSubmit" class="btn btn-primary btn-xl">
+                        <br />&nbsp;<br />
+
+                        <!-- Order Information Response -->
+                        <div name="orderInfo" id="orderInfo" class="order-response-bold">
+                            <h1>Please Note</h1>
+                            <p name="orderInfoResponse" id="orderInfoResponse">
+                                <span style="color: #003366;">The order information will be updated when order is placed.</br>Your total cost including shipping will be displayed here.</span>
+                            </p>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section-->
+        <section class="page-section bg-primary text-white mb-0" id="about">
+            <div class="container">
+                <h1 class="page-section-heading text-center text-normalcase text-normal">About</h1>
+                <div class="divider-custom divider-dark">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-circle-info"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 ms-auto">
+                        <p class="lead" style="color: #003366;">Anime Hub Guyana is your ultimate destination for premium anime merchandise in Guyana. Whether you're an avid collector or just starting your anime journey, we offer a handpicked collection of action figures, apparel, manga, and more. Our mission is to unite anime fans through exciting events such as meetups and conventions, while offering fans a seamless shopping experience.</p>
+                    </div>
+                    <div class="col-lg-4 me-auto">
+                        <p class="lead" style="color: #003366;">We are committed to providing quality products with fast and reliable shipping. Anime Hub Guyana aims to be the go-to anime store in the region, bringing the best of Japanese culture to the hearts of anime fans across Guyana and beyond.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section-->
+        <section class="page-section" id="contact">
+            <div class="container">
+                <h1 class="page-section-heading text-center text-normalcase text-normal mb-0">Contact Us</h1>
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-xl-7">
+                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <label for="name">Full Name</label>
+                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                <label for="email">Email address</label>
+                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                                <label for="phone">Phone number</label>
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" id="message" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                <label for="message">Message</label>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                            </div>
+                            <button class="btn btn-primary btn-xl" id="submitButton" type="submit">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section-->
+        <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-normalcase mb-4" style="color: #e60073;">Our Locations</h4>
+                        <p class="lead mb-0">
+                            <span class="business-name"><span style="color: #ffccff;">Reg4: Collage Guyana, Sheriff Street, </span><br />Georgetown | 8am - 5pm</span>
+                            <br />
+                            <span class="business-name"><span style="color: #ffccff;">Reg5: M Chand's Pharmacy, Ritz Mall, </span><br />Rosignol | 8am - 5pm</span>
+                            <br />
+                            <span class="business-name"><span style="color: #ffccff;">Reg6: Zim & Mo's Investment, Strand, </span><br />New Amsterdam | 8am - 5pm</span>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-normalcase mb-4" style="color: #e60073;">Connect With Us</h4>
+                        <a class="btn btn-outline-light btn-social mx-1" style="color: #e60073;" href="https://www.facebook.com/p/AnimeHub-GY-100089372757185"><i class="fab fa-fw fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" style="color: #e60073;" href="https://www.tiktok.com/@animehub_gy"><i class="fab fa-fw fa-tiktok" ></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" style="color: #e60073;" href="https://www.instagram.com/animehub_gy"><i class="fab fa-fw fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" style="color: #e60073;" href="mailto:animehub.gy@gmail.com"><i class="fab fa-fw fa-google"></i></a>
+                        <br />&nbsp;<br />
+                        <h4 class="lead mb-0" style="color: #ffccff;">Or call us at +592 674 5403</h4>
+                    </div>
+
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-normalcase mb-4" style="color: #e60073;">Developer Info</h4>
+                        <p class="lead mb-0" style="color: #ffccff;">
+                            Aslima Deodat
+                            <br/>
+                            <a href="mailto:aslima.deodat@torontomu.ca">aslima.deodat@torontomu.ca</a>
+                            <br/>
+                            Student Nr: 501340933
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Copyright Section-->
+        <div class="copyright py-4 text-center text-white">
+            <div class="container"><small>All Media Copyright &copy; Anime Hub Guyana 2024. All Rights Reserved.</small></div>
+        </div>
+      
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="./static/js/scripts.js"></script>
+        <!-- SB Forms JS-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  
+        <script>
+        $(document).ready(function() {
+            console.log("document loaded");
+
+            $('#btnSubmit').click(function(event) {
+                console.log("submit button clicked");
+                event.preventDefault();
+                var form = $("#orderInfoForm")[0];
+                var data = new FormData(form);
+                console.log(data);
+
+                $.ajax({ 
+                    type: "POST",
+                    enctype: 'multipart/form-data',
+                    url: "http://localhost:5000/order/new",
+                    data: data,
+                    processData: false,
+                    contentType: false,
+                    cache: false,
+                    timeout: 800000,
+                    success: function (data) {
+                        console.log(data);
+                        $("#orderInfoResponse").text(data);
+                    },
+                    error: function (err) {
+                        console.log(err);
+                        console.log("error encountered - check middleware is running");
+                    }
+                });
+            });
+        });
+        </script>
+    </body>
+</html>
+
+   
